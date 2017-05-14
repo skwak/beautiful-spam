@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Category(props) {
-  return <li>{props.name}</li>
+  return <li><a href='' className='category--link'>{props.name}</a></li>
 }
 
 export default Category;

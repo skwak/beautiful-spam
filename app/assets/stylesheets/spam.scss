@@ -1,17 +1,25 @@
 // Place all the styles related to the spam controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 body {
-  font-family: 'arial';
+  padding: 0;
+  margin: 0;
+}
+
+.header--image {
+  height: 70px;
 }
 
 .categories {
-  color: rgb(236, 92, 196);
+  color: #000;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .categories li {
+  margin: 0;
+  padding: 0;
   display: inline;
 }
 
@@ -21,4 +29,16 @@ body {
 
 .categories li:last-child:after {
   content: '';
+}
+
+.category--link {
+  font-family: 'arial';
+  color: #0000EE;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.spam--title {
+  font-weight: lighter;
+  font-size: 11pt;
 }
