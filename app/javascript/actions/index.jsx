@@ -1,12 +1,28 @@
 import axios from 'axios';
 
-const API_URL = `/api/spam`;
-export const GET_SPAM = 'GET_SPAM';
+const SPAM_API_URL = `/api/spam`;
+const CATEGORIES_API_URL = `/api/categories`;
 
-export default function getAllSpams() {
-   const request = axios.get(API_URL);
-   return {
-         type: GET_SPAM,
-         payload: request
-      };
+export const GET_SPAM = 'GET_SPAM';
+export const GET_CATEGORIES = 'GET_CATEGORIES';
+
+export const getSpam = () => {
+  const request = axios.get(SPAM_API_URL);
+  return {
+    type: GET_SPAM,
+    payload: request
+  };
 }
+
+export const getCategories = () => {
+  const request = axios.get(CATEGORIES_API_URL);
+  return {
+    type: GET_CATEGORIES,
+    payload: request
+  };
+}
+
+export default {
+  getSpam,
+  getCategories
+};

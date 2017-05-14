@@ -5,3 +5,20 @@
 body {
   font-family: 'arial';
 }
+
+.categories {
+  color: rgb(236, 92, 196);
+  list-style-type: none;
+}
+
+.categories li {
+  display: inline;
+}
+
+.categories li:after {
+  content: ', ';
+}
+
+.categories li:last-child:after {
+  content: '';
+}

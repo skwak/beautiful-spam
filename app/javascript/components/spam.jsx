@@ -2,7 +2,7 @@ import React from 'react';
 
 function Spam(props) {
   return (
-    <div className="spam-slice">
+    <div className="spam">
       <h2>{props.title}</h2>
     </div>
   )
