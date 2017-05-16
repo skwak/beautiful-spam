@@ -19,7 +19,7 @@ class SpamList extends React.Component {
   }
 
   onCategoryClick(category) {
-    this.props.getSpamByCategory(category).payload.then((result) => { this.setState({ spam: result.data }) });
+    // this.props.getSpamByCategory(category).payload.then((result) =>  { this.setState({ spam: result.data, visible: true}) });
   }
 
   render() {
@@ -38,7 +38,7 @@ class SpamList extends React.Component {
 
         {this.state.visible ? (
           <h2>BLAH</h2>
-        ) : null}
+        ) : <h2>NO</h2>}
       </div>
     )
   }
