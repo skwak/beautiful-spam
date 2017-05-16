@@ -4,6 +4,7 @@ const SPAM_API_URL = `/api/spam`;
 const CATEGORIES_API_URL = `/api/categories`;
 
 export const GET_SPAM = 'GET_SPAM';
+export const GET_SPAM_BY_CATEGORY = 'GET_SPAM_BY_CATEGORY';
 export const GET_CATEGORIES = 'GET_CATEGORIES';
 
 export const getSpam = () => {
@@ -15,7 +16,7 @@ export const getSpam = () => {
 }
 
 export const getSpamByCategory = (category) => {
-  const request = axios.get(`${SPAM_API_URL}?category={category}`);
+  const request = axios.get(`${SPAM_API_URL}?category=${category}`);
   return {
     type: GET_SPAM_BY_CATEGORY,
     payload: request,
@@ -33,5 +34,6 @@ export const getCategories = () => {
 
 export default {
   getSpam,
+  getSpamByCategory,
   getCategories
 };

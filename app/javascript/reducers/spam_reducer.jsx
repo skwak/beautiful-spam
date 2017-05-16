@@ -1,4 +1,4 @@
-import { GET_SPAM } from '../actions/index';
+import { GET_SPAM, GET_SPAM_BY_CATEGORY } from '../actions/index';
 
 export default function(state = [], action) {
 
@@ -6,8 +6,7 @@ export default function(state = [], action) {
       case GET_SPAM:
          return [ action.payload.data, ...state ];
       case GET_SPAM_BY_CATEGORY:
-        return [ action.payload.data, ...state ];
+        return [ action.payload.data, action.display, ...state ];
    }
-
    return state;
 }
