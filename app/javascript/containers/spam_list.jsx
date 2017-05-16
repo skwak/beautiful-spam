@@ -18,30 +18,45 @@ class SpamList extends React.Component {
   }
 
   render() {
-    console.log(this.state.categories);
     return (
       <div className="spam-container">
         <ul className="categories">
           {this.state.categories.map((category, index) => {
             return (
-              <Category key={index} name={category.name} />
+              <Category key={index}
+                name={category.name}
+                onClick={() =>  {
+                  store.dispatch({
+                    type: 'GET_SPAM_BY_CATEGORY',
+                    name: category.name
+                  })
+                }}
+              />
             )
           })}
         </ul>
-        <div className="spams">
-          {this.state.spam.map((tinyspam, index) => {
-            return (
-              <Spam key={index} title={tinyspam.title} />
-            )
-          })}
-        </div>
       </div>
     )
   }
 }
 
-function mapDispatchToProps(dispatch) {
-   return bindActionCreators({ getSpam, getCategories }, dispatch );
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     onTodoClick: (id) => {
+//       dispatch(toggleTodo(id))
+//     }
+//   }
+// }
+//
+
+const mapDispatchToProps = (dispatch) => {
+   return bindActionCreators({
+     getSpam,
+     getCategories,
+     onCategoryClick: (categoryName) => {
+       dispatch(getSpamByCategory(categoryName))
+     }
+   }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(SpamList);

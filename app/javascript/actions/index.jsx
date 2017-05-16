@@ -14,6 +14,15 @@ export const getSpam = () => {
   };
 }
 
+export const getSpamByCategory = (category) => {
+  const request = axios.get(`${SPAM_API_URL}?category={category}`);
+  return {
+    type: GET_SPAM_BY_CATEGORY,
+    payload: request,
+    display: true
+  };
+}
+
 export const getCategories = () => {
   const request = axios.get(CATEGORIES_API_URL);
   return {

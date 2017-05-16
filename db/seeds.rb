@@ -6,9 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Spam.find_or_create_by(title: "THE BEAUTIFUL PEOPLE they are here for you Bringing You The Spoils of Love You Will Never Get Over It", body: "La")
+spam = Spam.find_or_create_by(title: "THE BEAUTIFUL PEOPLE they are here for you Bringing You The Spoils of Love You Will Never Get Over It", body: "La")
+category = Category.find_or_create_by(name: "beauty")
+category.spams << spam
 
-Category.find_or_create_by(name: "beauty")
 Category.find_or_create_by(name: "career")
 Category.find_or_create_by(name: "love")
 Category.find_or_create_by(name: "age")
