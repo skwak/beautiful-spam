@@ -1,7 +1,17 @@
 import React from 'react';
 
-function Category(props) {
-  return <li><a href='' className='category--link' onClick={() => props.onCategoryClick(props.name)}>{props.name}</a></li>
+const Category = (props) => {
+  return (
+    <li>
+      <a href=""
+         className="category--link"
+         onClick={(e) => {
+           e.preventDefault();
+           props.categoryClick(props.categoryName)
+         }
+      }>{props.categoryName}</a>  
+    </li>
+  )
 }
 
 export default Category;
