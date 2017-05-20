@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   root to: 'spam#index'
   get '/api/spam', to: 'api/spam#index'
   get '/api/categories', to: 'api/categories#index'
-  get '/about/', to: 'about#index'
 end

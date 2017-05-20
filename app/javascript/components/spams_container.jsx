@@ -3,13 +3,15 @@ import axios from 'axios';
 
 import Category from './category';
 import SpamList from './spam_list';
+import About from './about';
 
 class SpamsContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { spams: [], categories: [], spamVisibility: false }
+    this.state = { spams: [], categories: [], spamVisibility: false, aboutVisibility: false }
 
     this.categoryClick = this.categoryClick.bind(this);
+    this.aboutClick = this.aboutClick.bind(this);
   }
 
   componentDidMount() {
@@ -30,44 +32,63 @@ class SpamsContainer extends React.Component {
       });
   }
 
+  aboutClick() {
+    this.setState({ aboutVisibility: true });
+  }
+
   render() {
     console.log(this.state)
     return (
       <div className="container">
-        <ul className="categories">
-            {this.state.categories.map((category, index) => {
-              return (
-                <Category key={index} categoryName={category.name} categoryClick={this.categoryClick} />
-              )
-            })}
-        </ul>
+        <div className="categories-spam-intro">
+          <div className="header">
+            <h1 className="header--title">beautiful spam</h1>
+          </div>
+          <ul className="categories">
+              {this.state.categories.map((category, index) => {
+                return (
+                  <Category key={index} categoryName={category.name} categoryClick={this.categoryClick} />
+                )
+              })}
+            </ul>
 
-        <div className="site--intro">
-          <p className="site--intro-first">
-            I want to tell you something, but I want to wear a mask.
-            Commodity made me this way, and I'm sorry.
-            I'm jumbled up inside, and I want to express myself without known
-            rules to constrain me.
-          </p>
-          <p className="site--intro-second">
-            No gross people here.
-            If you're gross, you're somewhere else.
-            I don't even have to do that labor.
-            You've already left!
-          </p>
-          <p className="site--intro-third">
-            This is a Utopia.
-            Your neurons join with my neurons if you are certified
-            acceptable by the Center of Acceptability.
-          </p>
+            <div className="site--intro">
+              <p className="site--intro-first">
+                I want to tell you something, but I want to wear a mask.
+                Commodity made me this way, and I'm sorry.
+                I'm jumbled up inside, and I want to express myself without known
+                rules to constrain me.
+              </p>
+              <p className="site--intro-second">
+                No gross people here.
+                If you're gross, you're somewhere else.
+                I don't even have to do that labor.
+                You've already left!
+              </p>
+              <p className="site--intro-third">
+                This is a Utopia.
+                Your neurons join with my neurons if you are certified
+                acceptable by the Center of Acceptability.
+              </p>
+            </div>
+
+            {this.state.spamVisibility ? (
+              <SpamList spams={this.state.spams} />
+            ) : (
+              <p></p>
+            )}
+          </div>
+
+          <footer className="site--footer">
+            <span className="site--footer-link" onClick={() => this.aboutClick()}>About</span>
+
+            {this.state.aboutVisibility ? (
+              <About />
+            ) : (
+              <p></p>
+            )}
+          </footer>
         </div>
-
-        {this.state.spamVisibility ? (
-          <SpamList spams={this.state.spams} />
-        ) : (
-          <p></p>
-        )}
-      </div>
     )
   }
 }

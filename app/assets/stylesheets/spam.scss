@@ -7,13 +7,11 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+
 }
 
 main {
-  flex: 1 0 auto;
+
 }
 
 .header--title {
@@ -26,6 +24,13 @@ main {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.categories-spam-intro {
+  flex: 1 0 auto;
   margin-left: 20px;
   width: 1000px;
   margin: 0 auto;
