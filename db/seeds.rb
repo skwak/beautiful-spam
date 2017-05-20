@@ -60,5 +60,24 @@ category.spams << spam
 
 Category.find_or_create_by(name: "career")
 Category.find_or_create_by(name: "love")
+
+age_spam = Spam.find_or_create_by(title: "BE YOU FOREVER! but not really forever, you can turn on and off at your leisure")
+age_spam.body =
+"The Internet feels scattered and strange, just like you. Do you know what came first? It's an age-old question, a chicken and the egg.
+
+Am I scattered and strange because of the Internet, or did the Internet make me scattered and strange? I hear the tree falling in the forest,
+as I examine my body and face for any signs of age.
+
+Did you know we all die?
+In a way, it is comforting.
+Life is very tedious, and perhaps for most, it is not very nice.
+But we know nothing else, and the idea of non-being, worse than the idea of un-being,
+is a scary thought, one that has the Google people perplexed and attempting to make us live forever.
+Can I tell you that this is not the right way to go about this problem of WRINKLES and a body that makes the word 'meatspace'
+ever so real.
+"
+
 Category.find_or_create_by(name: "age")
+
+
 Category.find_or_create_by(name: "money")

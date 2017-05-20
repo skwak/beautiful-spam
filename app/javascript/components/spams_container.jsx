@@ -33,7 +33,7 @@ class SpamsContainer extends React.Component {
   render() {
     console.log(this.state)
     return (
-      <div className="spams--container">
+      <div className="container">
         <ul className="categories">
             {this.state.categories.map((category, index) => {
               return (
@@ -42,16 +42,34 @@ class SpamsContainer extends React.Component {
             })}
         </ul>
 
+        <div className="site--intro">
+          <p className="site--intro-first">
+            I want to tell you something, but I want to wear a mask.
+            Commodity made me this way, and I'm sorry.
+            I'm jumbled up inside, and I want to express myself without known
+            rules to constrain me.
+          </p>
+          <p className="site--intro-second">
+            No gross people here.
+            If you're gross, you're somewhere else.
+            I don't even have to do that labor.
+            You've already left!
+          </p>
+          <p className="site--intro-third">
+            This is a Utopia.
+            Your neurons join with my neurons if you are certified
+            acceptable by the Center of Acceptability.
+          </p>
+        </div>
+
         {this.state.spamVisibility ? (
           <SpamList spams={this.state.spams} />
         ) : (
-          <h2>WHA</h2>
+          <p></p>
         )}
-
       </div>
     )
   }
 }
-
 
 export default SpamsContainer;

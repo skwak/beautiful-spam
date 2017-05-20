@@ -6,9 +6,11 @@ const SpamList = (props) => {
       {props.spams.map((spam, index) => {
         return (
           <div key={index} className="spam--content">
-            <span className="spam--top"></span>
-            <h2 className="spam--title">{spam.title}</h2>
-            <p className="spam--body">{spam.body}</p>
+            <div className="spam--middle">
+              <h2 className="spam--title">{spam.title}</h2>
+              <p className="spam--body">{spam.body}</p>
+              <span className="spam--bottom"></span>
+            </div>
           </div>
         )
       })}
