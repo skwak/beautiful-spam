@@ -24,4 +24,5 @@
 /public/packs
 /node_modules
 
+.env
 /public/.well-known/acme-challenge/*
