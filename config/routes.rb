@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root to: 'spam#index'
   get '/api/spam', to: 'api/spam#index'
   get '/api/categories', to: 'api/categories#index'
-  get "/.well-known/acme-challenge/#{ENV["ACME_KEY"]}", to: "application#index"
+  get "/.well-known/acme-challenge/:id", to: "application#index"
 end
