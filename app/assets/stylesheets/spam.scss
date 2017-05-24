@@ -6,14 +6,6 @@ html, body {
   margin: 0;
 }
 
-body {
-
-}
-
-main {
-
-}
-
 .header--title {
   text-transform: uppercase;
   font-weight: 600;
@@ -27,6 +19,31 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.about {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+}
+
+.about--close {
+  font-size: 12pt;
+  text-align: right;
+  font-family: arial;
+}
+
+.about--close__in-case-you-didnt-get-it {
+  font-size: 30pt;
+}
+
+.about--text {
+  font-size: 20pt;
+  background-color: rgb(255, 245, 110);
+}
+
+.about--pink {
+  color: #FF99ED;
 }
 
 .categories-spam-intro {
