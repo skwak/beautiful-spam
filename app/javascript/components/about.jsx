@@ -4,18 +4,6 @@ const About = (props) => {
   // console.log(`state from About: ${this.state}`);
   return (
     <div className="about">
-      <div className="about--close"
-           onClick={(e) => {
-             e.preventDefault()
-             props.onAboutMinimizeClick();
-           }
-      }>
-        <div className="about--close__in-case-you-didnt-get-it">
-          X
-        </div>
-        x_tremely straightedge_x
-      </div>
-
       <p className="about--text">
         When I am very desperate for something, I will occasionally check my spam box.
         I seek to have nearly-missed some kind of communication that mistakenly made its
@@ -55,7 +43,7 @@ const About = (props) => {
         magical.</p>
 
       <p className="about--text">
-        I WISH I WAS SPECIAL like that Radiohead song. I'm like Thom Yorke, excpet I'm a millennial.
+        I WISH I WAS SPECIAL like that Radiohead song. I'm like Thom Yorke, except I'm a millennial.
         I wanna be ironic, not wear my heart on my sleeve, even if it makes me feel a little
         lonely at all times, as if I'm wearing a pillow bodysuit.
         My padding is my shade of millennial pink representing my commercial viability.
@@ -67,6 +55,18 @@ const About = (props) => {
         I would be more explicit, and give you some more stuctured meaning, but I am trying to be spam here. This is my job, and
         my excuse to be able to do stream-of-consciousness writing.
       </p>
+      
+      <div className="about--close"
+           onClick={(e) => {
+             e.preventDefault()
+             props.onAboutMinimizeClick();
+           }
+      }>
+        <div className="about--close__in-case-you-didnt-get-it">
+          X
+        </div>
+        x_tremely straightedge_x
+      </div>
     </div>
   )
 }
