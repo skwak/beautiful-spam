@@ -12,6 +12,7 @@ class SpamsContainer extends React.Component {
 
     this.categoryClick = this.categoryClick.bind(this);
     this.aboutClick = this.aboutClick.bind(this);
+    this.onMinimizeClick = this.onMinimizeClick.bind(this);
   }
 
   componentDidMount() {
@@ -34,6 +35,10 @@ class SpamsContainer extends React.Component {
 
   aboutClick() {
     this.setState({ aboutVisibility: true });
+  }
+
+  onMinimizeClick() {
+    this.setState({ spamVisibility: false });
   }
 
   render() {
@@ -73,7 +78,7 @@ class SpamsContainer extends React.Component {
             </div>
 
             {this.state.spamVisibility ? (
-              <SpamList spams={this.state.spams} />
+              <SpamList spams={this.state.spams} onMinimizeClick={this.onMinimizeClick} />
             ) : (
               <p></p>
             )}
