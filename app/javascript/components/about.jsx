@@ -37,15 +37,28 @@ const About = (props) => {
       <p className="about--text">
         If I was special, if there was magic in the world,
         these are the spam emails I would receive, and I wouldn't have written them
-        myself. This is the spam I'd get, after deeply hoping and almost giving up,
-        but then getting them. In this universe, I get everything I want, but only after a little struggle
+        myself, although it was nice to write these, though not as good as if someone
+        else had and sent them just for me, the way somehow cooking is done for other people,
+        and how food tastes more delicious when someone has made something just for you, even
+        if you could make it for yourself if you wanted.
+        I began this as a set of titles on Are.na (https://www.are.na/stephanie-kwak/spam-subject-lines-i-d-want-to-receive),
+        and I felt the urge of the common feelings.
+      </p>
+      <p>
+        This is the spam I'd get, after deeply hoping and almost giving up,
+        but then getting them before I got sarcastic, weary, hopeless.
+        In this universe, I get everything I want, but only after a little struggle
         that makes me grateful, makes the crescendo towards joy and delight ever so
-        magical.</p>
+        magical.
+      </p>
 
       <p className="about--text">
-        I WISH I WAS SPECIAL like that Radiohead song. I'm like Thom Yorke, except I'm a millennial.
         I wanna be ironic, not wear my heart on my sleeve, even if it makes me feel a little
         lonely at all times, as if I'm wearing a pillow bodysuit.
+        But everyone knows I am a gentle being, if a little complex and misguided sometimes.
+        I do not desire to be understood by the masses or even a generation, but a demographic sliver.
+        Do not blame me. Blame the Baby Boomers for the full commodification, branding, and marketing
+        of the self.
         My padding is my shade of millennial pink representing my commercial viability.
         Remember when people wore sweatpants with <span className="about--pink">PINK</span> on the butt?
         Those were weird times. Maybe it's still happening in another universe.
@@ -55,7 +68,7 @@ const About = (props) => {
         I would be more explicit, and give you some more stuctured meaning, but I am trying to be spam here. This is my job, and
         my excuse to be able to do stream-of-consciousness writing.
       </p>
-      
+
       <div className="about--close"
            onClick={(e) => {
              e.preventDefault()
