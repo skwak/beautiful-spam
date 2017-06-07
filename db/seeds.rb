@@ -45,22 +45,60 @@ Please send me a letter because I really need it right now.
 Don't send me any scary ones. read my mind and send me a good one.
 I am not taking this pill, and look at me now.
 
-In 1972, General Lily-Eduardo Georges E. Saint Michigan III from the Republic of January visited the Eminent Colonel A.M.D., who suffered from an acute sweating disease.\n
+In 1972, Lily-Eduardo Georges E. Saint Michigan III from the Republic of January visited the Eminent Colonel A.M.D., who suffered from an acute sweating disease.\n
 Desperately trying to get rid of his embarrassing predicament, one which made him highly aware of his body from a young age and which
 paved his way to the military, as in the military there was constant movement, and most were sweating all of the time or were too engrossed in the
 the question of life or death to notice his sweat, which fortunately did not small, merely provide a sheen of grease over his meaty body at all times. You know those people
 who put tons of product in their hair, and it's covered in a layer of grease? Just imagine that but on a FACE, a face.
 
-The Colonel met then Governor of Georgia Jimmy Carter at a fundraising dinner for Peanuts For Humanity, and he was grateful for the peanuts everywhere, as he was dripping sweat, which
+Lily-Eduardo Georges E. Saint Michigan III met then-Governor of Georgia Jimmy Carter at a fundraising dinner for Peanuts For Humanity, and he was grateful for the peanuts everywhere, as he was dripping sweat, which
 got into the peanuts at every corners of the mansion, but the sweat was salty, just like the peanuts, and no one noticed. He talked about military battles and politics in Scandinavia as he whipped out a
 handkerchief and pretended to blow his nose but was disguising a swipe at the tip of his nose from preventing visible beads of sweat to fall down as he talked, as Jimmy Carter was looking at him with
-kind eyes, and that made him feel very vulnerable."
-category = Category.find_or_create_by(name: "beauty")
-category.spams << spam
+kind eyes, and that made him feel very vulnerable.
+
+Lily-Eduardo Georges E. Saint Michigan III was born at the wrong time, before your sweat glands could be removed forever. Human natural selection and evolution mean nothing sometimes."
+beauty_category = Category.find_or_create_by(name: "beauty")
+beauty_category.spams << spam
+
+life_category = Category.find_or_create_by(name: "life")
+life_spam = Spam.find_or_create_by(title: "I wanna be distracted")
+life_spam.body =
+"Why kind of life do you want to live?
+I bet you want to live a good and happy life.
+The surveys told that to me.
+But words are meaningless, and pills are real.
+Most pills make you sedated,
+this pills keeps you focused on the good things,
+and distracted away from the bad things,
+which means...The Good Moments are slow and memorably,
+the rest is swift, but you learn from it,
+the good moments are in much larger proportion than the other times,
+the boring times productive and yet not terribly memorable,
+'I wanna be memorable,
+Bah bah bah bah bah,'
+that's every song I've heard once.
+You wanna practice self-care,
+You also want things from others,
+You wanna be known for generosity and cleverness and uniqueness,
+without being called a black sheep or be weird in a bad way,
+that line seems really a wavy line,
+maybe all culture is like that,
+a scattering sound,
+and in a life it's looping.
+You hope to live a line sloping up,
+with the very best in science that your ancestors wanted for themselves,
+they give it to you,
+not out of selflessness,
+but because they needed to make money, and it was way to make money."
+life_category.spams << life_spam
 
 Category.find_or_create_by(name: "career")
-Category.find_or_create_by(name: "love")
 
+love_category = Category.find_or_create_by(name: "love")
+love_spam = Spam.find_or_create_by(title: "You are not small and meaningless. You are actually the One!")
+love_category.spams << love_spam 
+
+age_category = Category.find_or_create_by(name: "age")
 age_spam = Spam.find_or_create_by(title: "BE YOU FOREVER! but not really forever, you can turn on and off at your leisure")
 age_spam.body =
 "The Internet feels scattered and strange, just like you. Do you know what came first? It's an age-old question, a chicken and the egg.
@@ -75,9 +113,15 @@ But we know nothing else, and the idea of non-being, worse than the idea of un-b
 is a scary thought, one that has the Google people perplexed and attempting to make us live forever.
 Can I tell you that this is not the right way to go about this problem of WRINKLES and a body that makes the word 'meatspace'
 ever so real.
-"
 
-Category.find_or_create_by(name: "age")
+The fountain of youth is here, but it stops at the good parts, parts that may extend past youth, so that you may be the
+best version of yourself at all times.
+Some people, for instance, look strangely better later in life than they did a younger ages.
+Some people look better with wrinkles, their face sagging just so, like a well-draped table.
+A table that is made of wood that looks different now, but maybe better than at its so-called prime.
+You are not a vampire, however. It will stop at sometime, but only when you are ready for it and want it.
+Sip in this luxury stew like Mr. Scrooge in coins."
+age_category.spams << age_spam
 
-
-Category.find_or_create_by(name: "money")
+money_category = Category.find_or_create_by(name: "money")
+money_spam = Spam.find_or_create_by(title: "Be Donald Duck but without being addicted to money or bad things")
