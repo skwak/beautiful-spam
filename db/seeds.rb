@@ -70,7 +70,7 @@ But words are meaningless, and pills are real.
 Most pills make you sedated,
 this pills keeps you focused on the good things,
 and distracted away from the bad things,
-which means...The Good Moments are slow and memorably,
+which means...The Good Moments are slow and memorably\e,
 the rest is swift, but you learn from it,
 the good moments are in much larger proportion than the other times,
 the boring times productive and yet not terribly memorable,
@@ -82,21 +82,25 @@ You also want things from others,
 You wanna be known for generosity and cleverness and uniqueness,
 without being called a black sheep or be weird in a bad way,
 that line seems really a wavy line,
+sometimes the people most empathetic are in the future,
+or they're already dead,
 maybe all culture is like that,
 a scattering sound,
 and in a life it's looping.
 You hope to live a line sloping up,
+looping, sloping up, grander and grander until it seems linear,
 with the very best in science that your ancestors wanted for themselves,
 they give it to you,
 not out of selflessness,
-but because they needed to make money, and it was way to make money."
+but because they needed to make money, and it was way to make money, and life is
+addictive because it's all we got."
 life_category.spams << life_spam
 
 Category.find_or_create_by(name: "career")
 
 love_category = Category.find_or_create_by(name: "love")
 love_spam = Spam.find_or_create_by(title: "You are not small and meaningless. You are actually the One!")
-love_category.spams << love_spam 
+love_category.spams << love_spam
 
 age_category = Category.find_or_create_by(name: "age")
 age_spam = Spam.find_or_create_by(title: "BE YOU FOREVER! but not really forever, you can turn on and off at your leisure")
@@ -125,3 +129,33 @@ age_category.spams << age_spam
 
 money_category = Category.find_or_create_by(name: "money")
 money_spam = Spam.find_or_create_by(title: "Be Donald Duck but without being addicted to money or bad things")
+money_spam.body =
+"My high school teacher taught us psychology from all the things she learned on talk shows.
+Some of these lessons I still haven't shaken. They cling to me as a memory, which is real, and I haven't yet
+scanned the Internet for the specific un-truth I don't know is false.
+But one thing I remember for her class of Ricki Lake and Phil Donahue, before The View was out,
+is that money changes people in bad ways, like Donald Duck.
+
+Donald Duck is greedy and swims in coins, which is a very interesting visual concept, haunting even,
+but not something I actually want to live because I am physical, and coins hurt.
+
+When people get a lot of money, and don't live simply, they usually become bad because they turn to the wrong
+things to keep their sense of elevation, instead of remembering that they die and get old, and the joys that are
+lasting are good food, honest companionship, and being entertained and distracted by it all by something,
+something that hopefully other people think of as meaningful and not meaningless, something that
+brings beauty to us.
+
+I am a life coach.
+I believe in this one route.
+If my route sounds good to you, you should contact me.
+But make sure you have enough money because I am a coach because I need money, too.
+Otherwise, I don't know what I would do. I wouldn't do this just for fun,
+although maybe I would because a permanent vacation does sound boring because
+I never do anything unless I'm forced to.
+  
+So hopefully you are rich, but you don't know what to do with it, and in that case I can help you.
+I have not yet been in your circumstance yet, but with your help, I can be, and that would be
+even better because I can try to follow my route and amend it specifically to help you later.
+Smash the subscribe button because I rely on advertisement money, as well.
+This will also help me in my destination as a life coach."
+money_category.spams << money_spam
