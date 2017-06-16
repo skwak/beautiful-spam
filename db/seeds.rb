@@ -100,6 +100,44 @@ Category.find_or_create_by(name: "career")
 
 love_category = Category.find_or_create_by(name: "love")
 love_spam = Spam.find_or_create_by(title: "You are not small and meaningless. You are actually the One!")
+love_spam.body =
+"To live is the hardest riddle of all time.
+To have love that is not about you feels good because you can concentrate on something other than yourself,
+which is good because then you are no longer thinking about the Hardest Riddle of All Time.
+However, you don't want to be too consumed.
+Afterall, you are the one living,
+you are the one who is the center,
+so you must be giving, but not too giving,
+you still need those articles about the 10 Best Self-Care Methods To Practice This Weekend,
+you still need to have a personality and things like that.
+I have all kinds of healthy loves,
+that make you feel pampered but not greedy.
+If you don't want moderation, I ask of you to think about your life's story carefully,
+you can sacrifice as long as it makes for a good story to tell, although it may not be you
+who is alive to do the telling.
+So we help to find you a love,
+we ensure that this love will stay with you throughout your life,
+and you die at exactly the same time, naturally, so neither one of you has to suffer,
+I mean you will suffer sometimes, but you won't have to suffer the death of your life's love,
+and this love will be forever,
+it'll be under your control, but not in some sick, creepy way,
+in a nice, organic, healthy way.
+But maybe you won't want that, maybe you want something kind of tragic,
+maybe you are the kind of person who enjoys living a vat of misery,
+maybe a vat of misery is your muse,
+and other people are the pieces of string in sticks of dynamite,
+or maybe...
+many possibilities...
+so...FORGET I told you all of this,
+just...nevermind.
+In order to think about good things,
+you got to let me think about the bad things,
+so let me take care of everything for you,
+just concentrate on what you love,
+what would you like your love to look like and be like?
+  Email me back, and someone will chat with you,
+  the powers of technology will be leveraged and give to you genuine emails only.
+"
 love_category.spams << love_spam
 
 age_category = Category.find_or_create_by(name: "age")
@@ -115,6 +153,19 @@ In a way, it is comforting.
 Life is very tedious, and perhaps for most, it is not very nice.
 But we know nothing else, and the idea of non-being, worse than the idea of un-being,
 is a scary thought, one that has the Google people perplexed and attempting to make us live forever.
+One of the weirdest discoveries I have made as I have gotten older,
+something that made me feel better about talking about anything with any kind of authority
+because I know I am not the smartest, most beautiful person in the world, and neither are you,
+but I have learned that the smartest people can't figure out their existences either.
+They're troubled just like you and me
+(it's so great!)
+and the smartest people tell half-truths about
+things because there is no way they can know everything about everything or solve every
+puzzle in the world.
+And hahahahahhahahaha, sometimes those half-truths help people's creativity.
+But, half-truths are bad for the government and for journalism. I am not trying to promote half-truths
+as always good, just potentially good.
+So you know, being the best or the top of anythng
 Can I tell you that this is not the right way to go about this problem of WRINKLES and a body that makes the word 'meatspace'
 ever so real.
 
@@ -122,6 +173,7 @@ The fountain of youth is here, but it stops at the good parts, parts that may ex
 best version of yourself at all times.
 Some people, for instance, look strangely better later in life than they did a younger ages.
 Some people look better with wrinkles, their face sagging just so, like a well-draped table.
+You may want to look at your prime at all ages, but the technology is not there just yet. We are working on that.
 A table that is made of wood that looks different now, but maybe better than at its so-called prime.
 You are not a vampire, however. It will stop at sometime, but only when you are ready for it and want it.
 Sip in this luxury stew like Mr. Scrooge in coins."
@@ -137,7 +189,10 @@ But one thing I remember for her class of Ricki Lake and Phil Donahue, before Th
 is that money changes people in bad ways, like Donald Duck.
 
 Donald Duck is greedy and swims in coins, which is a very interesting visual concept, haunting even,
-but not something I actually want to live because I am physical, and coins hurt.
+but not something I actually want to live because I am physical, and coins hurt, and that would
+only be good or interesting if I felt like I was being watched, and I knew it was an interesting thing to watch,
+and I enjoyed being watched. There are so many what-ifs to this scenario. It's not really worth it.
+The manifestation of this imagery in a human life is bad 99.9% of the time.
 
 When people get a lot of money, and don't live simply, they usually become bad because they turn to the wrong
 things to keep their sense of elevation, instead of remembering that they die and get old, and the joys that are
@@ -152,10 +207,28 @@ But make sure you have enough money because I am a coach because I need money, t
 Otherwise, I don't know what I would do. I wouldn't do this just for fun,
 although maybe I would because a permanent vacation does sound boring because
 I never do anything unless I'm forced to.
-  
+Even going on trips would be mostly boring because what would I talk about with other people.
+I would have to go on more trips to have something to talk about on trips, I talk
+about those other trips. But then that might sound like I was bragging, like
+I'm so rich I can just travel everywhere, as I tip my fedora.
+I don't want to come across that way, so work would be better to talk about.
+Maybe I can talk about less personal things, like books or movies, but that
+can get boring fast because talking about that stuff is usually made interesting by
+those topics being so subjective, being intertwined with the personal.
+So you know what, maybe I would still be a life coach if I was rich.
+It seems like wealthy people like to invest money and do stuff that seems like work,
+even though they have plenty of money and can't really eat the entire world or maybe
+don't want to, so I guess I would follow that route and have a job or at least
+act like I have one so that I can talk about that, and then I have something to talk
+about on my trips when I travel, when I am on a vacation from my job or whatever
+is like a job.
+
 So hopefully you are rich, but you don't know what to do with it, and in that case I can help you.
 I have not yet been in your circumstance yet, but with your help, I can be, and that would be
 even better because I can try to follow my route and amend it specifically to help you later.
 Smash the subscribe button because I rely on advertisement money, as well.
-This will also help me in my destination as a life coach."
+This will also help me in my destination as a life coach.
+
+Sincerely,
+Your Money Angel"
 money_category.spams << money_spam
