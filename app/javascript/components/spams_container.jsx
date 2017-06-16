@@ -8,12 +8,13 @@ import About from './about';
 class SpamsContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { spams: [], categories: [], spamVisibility: false, aboutVisibility: false }
+    this.state = { spams: [], categories: [], spamVisibility: false, aboutVisibility: false, sendVisibility: false }
 
     this.categoryClick = this.categoryClick.bind(this);
     this.aboutClick = this.aboutClick.bind(this);
     this.onMinimizeClick = this.onMinimizeClick.bind(this);
     this.onAboutMinimizeClick = this.onAboutMinimizeClick.bind(this);
+    this.toggleSend = this.toggleSend.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +45,14 @@ class SpamsContainer extends React.Component {
 
   onMinimizeClick() {
     this.setState({ spamVisibility: false });
+  }
+
+  toggleSend() {
+    if (this.state.sendVisibility) {
+      this.setState({ sendVisibility: false})
+    } else {
+      this.setState({ sendVisibility: true });
+    }
   }
 
   render() {
@@ -83,7 +92,7 @@ class SpamsContainer extends React.Component {
             </div>
 
             {this.state.spamVisibility ? (
-              <SpamList spams={this.state.spams} onMinimizeClick={this.onMinimizeClick} />
+              <SpamList spams={this.state.spams} onMinimizeClick={this.onMinimizeClick} toggleSend={this.toggleSend} sendVisibility={this.state.sendVisibility} />
             ) : (
               <p></p>
             )}
