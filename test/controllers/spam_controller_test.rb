@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class SpamControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should send from name with to email" do
+    get "/spam", params: { from: "foo", to: "sk@stephaniekwak.com" }
+
+    assert :success
+  end
 end

@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'dotenv'
+gem 'mailgun-ruby', '~>1.1.6'
 gem 'rails', '~> 5.1.1'
 gem 'pg', '~> 0.20.0'
 # Use sqlite3 as the database for Active Record

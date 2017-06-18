@@ -15,7 +15,7 @@ const SpamList = (props) => {
             <div className="spam--middle">
               <h2 className="spam--title">{spam.title}</h2>
               <div className="spam--send">
-                <button className="spam--send"
+                <button className="spam--send-button"
                   onClick={(e) => {
                     e.preventDefault()
                     props.toggleSend()
@@ -23,11 +23,12 @@ const SpamList = (props) => {
                 }>send</button>
                 {props.sendVisibility ? (
                     <div className="spam--send-interface">
-                      <form>
+                      <form action="/spam">
                         to:
-                        <input type="text" name="to-email" />
+                        <input className="spam--send-interface-input" type="text" name="from" />
                         from:
-                        <input type="text" name="from-email" />
+                        <input className="spam--send-interface-input" type="text" name="to" />
+                        <input type="submit" />
                       </form>
                     </div>
                   ) : (
