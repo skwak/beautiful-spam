@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'dotenv'
+gem 'dotenv-rails'
 gem 'mailgun-ruby', '~>1.1.6'
 gem 'rails', '~> 5.1.1'
 gem 'pg', '~> 0.20.0'

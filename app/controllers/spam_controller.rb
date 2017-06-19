@@ -3,7 +3,7 @@ class SpamController < ApplicationController
   end
 
   def send_email
-    SpamMailer.send_email(params[:from], params[:to])
+    SpamMailer.email(params[:from], params[:to]).deliver_now
     redirect_to root_path
   end
 end

@@ -1,17 +1,17 @@
+require 'mailgun'
+
 class SpamMailer < ApplicationMailer
-  def send_email(from_name, to_email)
-    mg_client = Mailgun::Client.new(ENV["MAILGUN_API_KEY"])
-    message_params =  {
-                       from: 'hi',
-                       to:   'sk@stephaniekwak.com',
-                       subject: 'test test',
-                       text: 'It is really easy to send a message!'
-                      }
+  def email(from_name, to_email)
+    client = Mailgun::Client.new(ENV["MAILGUN_API_KEY"])
 
-    result = mg_client.send_message(ENV["MAILGUN_DOMAIN"], message_params).to_h!
-#
-#                       message_id = result['id']
-# message = result['message']
-
+    client.send_message(
+      ENV["MAILGUN_DOMAIN"],
+      {
+        from: ENV["MAILGUN_SMTP_LOGIN"],
+        to: to_email,
+        subject: "hi",
+        text: "wow"
+      }
+    )
   end
 end
