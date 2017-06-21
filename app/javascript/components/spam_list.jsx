@@ -26,10 +26,10 @@ const SpamList = (props) => {
                       <div className="spam--send-interface">
                         <form action="/spam">
                           to:
-                          <input className="spam--send-interface-input" type="text" name="from" />
+                          <input className="spam--send-interface-input" type="text" name="to" placeholder="interesting_person @ THE UNIVERSE.theuniverse" />
                           from:
-                          <input className="spam--send-interface-input" type="text" name="to" />
-                          <input type="submit" />
+                          <input className="spam--send-interface-input" type="text" name="from" placeholder="intriguing person" />
+                          <input className="spam--send-interface-submit" type="submit" />
                         </form>
                       </div>
                     ) : (
