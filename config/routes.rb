@@ -5,6 +5,4 @@ Rails.application.routes.draw do
 
   get '/api/spam', to: 'api/spam#index'
   get '/api/categories', to: 'api/categories#index'
-
-  get '/spam', to: 'spam#send_email'
 end
