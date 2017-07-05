@@ -27,7 +27,6 @@ class SpamsContainer extends React.Component {
   categoryClick(categoryName) {
     axios.get(`/api/spam?category=${categoryName}`)
       .then((result) => {
-        // console.log(result.data)
         this.setState({ spams: result.data });
         if (result.data) {
           this.setState({ spamVisibility: true });
@@ -56,7 +55,6 @@ class SpamsContainer extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="container">
         <div className="categories-spam-intro">

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const About = (props) => {
-  // console.log(`state from About: ${this.state}`);
   return (
     <div className="about">
       <p className="about--text">
