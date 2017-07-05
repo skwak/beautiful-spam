@@ -96,7 +96,29 @@ but because they needed to make money, and it was way to make money, and life is
 addictive because it's all we got."
 life_category.spams << life_spam
 
-Category.find_or_create_by(name: "career")
+career_category = Category.find_or_create_by(name: "career")
+career_spam = Spam.find_or_create_by(title: "Say hello to power and control. You are a genius")
+career_spam.body =
+"They say that when a MAN dies, a career is very gendered you see,
+and his regret drips down into the blood, into the IV, over the regrets of
+For only 5 installments
+Use this link, and if not, then give me your credit card number,
+and my superb technology will take over your brain (if you are a man, since it's only men who care),
+and you will get the sense of purpose, dedication, and success you have always wanted
+flash before your eyes. It's as if you lived all those days working hard,
+for your identity, family, friends (You have all of these things in the Total Recall Technology
+I have crafted), and you made a great splash, and you never, ever jumped any kind of shark.
+
+You made it, and you never actually had to live it, but you did live it in your brain.
+You're a success. You have so much money. And then you're going to die.
+Of course that last part will be erased from the story. No, you'll be at your peak,
+you did a great success at the company. You indeed twisted your life into the
+shape you always wanted. It's such a sculpture,
+You're in your bed,
+sleeping in your bed so soundly, dreaming,
+when you die. You always knew, deep down, that the ending would be so sweet and satisfying.
+Your career really was the best book."
+career_category.spams << career_spam
 
 love_category = Category.find_or_create_by(name: "love")
 love_spam = Spam.find_or_create_by(title: "You are not small and meaningless. You are actually the One!")
