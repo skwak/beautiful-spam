@@ -108,16 +108,26 @@ html, body {
   top: 12%;
   left: 25%;
   width: 660px;
-  height: 100%;
   z-index: 1;
+  display: flex;
+  flex-flow: column;
 }
 
+.spam--close {
+  font-size: 50pt;
+  text-align: right;
+  overflow: hidden;
+}
+
+.spam--close:after {
+  height: 0px;
+}
 .spam--middle {
-  position: absolute;
+  position: relative;
   background-color: #FF99ED;
-  top: 10%;
   width: 620px;
   padding: 20px;
+  top:-10px;
 }
 
 
@@ -133,11 +143,6 @@ html, body {
   font-weight: lighter;
   font-size: 11pt;
   white-space:pre-wrap
-}
-
-.spam--close {
-  font-size: 50pt;
-  text-align: right;
 }
 
 .spam--bottom {
